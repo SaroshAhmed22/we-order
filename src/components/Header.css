@@ -2,6 +2,9 @@
     border:3px solid red;
 }
 
+body{
+    background-color: black;
+}
 .header-main{
     position: relative;
 }
@@ -37,3 +40,51 @@
 .all-btns button{
 /* margin-left: 20px; */
 }
+.button-container{
+    display: inline-block;
+}
+
+/* ! Meynmer Start */
+.acd-head{
+    /* justify-content: space-evenly; */
+    /* border: 10px solid; */
+    justify-content: space-evenly;
+}
+.our-acds{
+    /* background-color: #2a2427 !important; */
+    background-color:rgb(36, 36, 36) !important;
+}
+.minus-btn ,.plus-btn{
+    background-color: rgb(21, 21, 21) !important;
+    width: 100px;
+    height: 25px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;  
+}
+.my-list-btns{
+    color: white;  
+    background-color: rgb(21, 21, 21) !important;
+    border-radius: 5px;
+    border:none;
+
+}
+.sold{
+    margin-left: 10px;
+    background-color: gray;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+.di{
+    display: inline-block;
+}
+
+
+
+
+/* ! Meynmer end */

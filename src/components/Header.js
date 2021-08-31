@@ -27,8 +27,12 @@ const Header = () => {
                     </div>
                     {/* ! Buttons start */}
                     <div className="all-btns">
-                        <button type="button" class="btn btn-outline-dark our-buttons  btn-lg">Menyer</button>
-                        <button type="button" class="btn btn-outline-dark our-buttons ">Burgare och Sallad</button>
+                        <div className="button-container">
+                            <button type="button" class="btn btn-outline-dark our-buttons  btn-lg">Menyer</button>
+                        </div>
+                        <div className="button-container">
+                            <button type="button" class="btn btn-outline-dark our-buttons ">Burgare och Sallad</button>
+                        </div>
                         <button type="button" class="btn btn-outline-dark our-buttons ">Dryck</button>
                         <button type="button" class="btn btn-outline-dark our-buttons  ">Sides</button>
                         <button type="button" class="btn btn-outline-dark our-buttons ">Dipp</button>
@@ -42,7 +46,7 @@ const Header = () => {
 
             <div className="container-fluid">
                 <div className="container">
-                    <div className="col-md-9  col-12">
+                    <div className="col-md-9  col-12 ">
                         <Menyer />
 
                     </div>

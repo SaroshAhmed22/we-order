@@ -1,51 +1,205 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Icon } from '@material-ui/core';
+import { spacing } from '@material-ui/system';
+import { Button } from '@material-ui/core';
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '80%',
+    },
+    heading: {
+        fontSize: theme.typography.pxToRem(15),
+        fontWeight: theme.typography.fontWeightRegular,
+    },
+}));
+
 
 
 const Menyer = () => {
+    const classes = useStyles();
+    const array = [{ id: 1, one: "Acd1", two: "acd1data" },
+    { id: 2, one: "Acd2", two: "acd2data" }];
+
+
+
     return (
-        <div>
-            <h5>Menyer</h5>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <div className={classes.root} >
+            <Accordion className="our-acds">
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <div className="d-flex w-100 acd-head "  >
+                        <div className="d-flex flex-column">
+                            <div className="d-flex">
+                                <h5 className="ml-3 text-white">Lmited summer</h5>
+                                <button class="sold" >Sold out</button>
+                            </div>
+                            <p>
+                                asbahsahvsvhsavdashvdashvd
+                                asbahsahvsvhsavdashvdashvd
+                            </p>
+                            <h6 className="text-white">139,-</h6>
+                        </div>
+                        <div className="float-right">
+                            <img src="https://snappo-prod.s3.amazonaws.com/uploads/entry_images/menu_22570/5ec7511849c13eb8be9109c6ca1262789cb4d9b8.jpeg" alt="" width="200px" />
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </AccordionSummary>
+                <AccordionDetails >
+                    <div className="d-flex flex-column w-100">
+                        <div>
+                            <div className="">
+                                <div className="di">Amount 1</div>
+
+                                <div className="di" style={{ float: 'right' }}>
+                                    <div className="d-flex">
+                                        <button className="plus-btn"> +
+                                        </button>
+                                        <button className="plus-btn"> -
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <hr />
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Coca Cola Zero
+                                    </Button>
 
 
-        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Coca Cola Zero
+                                    </Button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+
+                        {/* 3 */}
+                        <div>
+                            <div className="">
+                                <div className="di">Valj Lask</div>
+                                <div className="di" style={{ float: 'right' }}>
+                                    <Button
+                                        class="my-list-btns "
+                                        size="small" variant="outlined" color="secondary">
+                                        Not Selected
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+
+                    </div>
+
+
+
+
+                </AccordionDetails>
+            </Accordion>
+        </div >
+
     )
 }
 
