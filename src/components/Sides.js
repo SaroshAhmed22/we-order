@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
 const Sides = () => {
     const classes = useStyles();
     return (
-        <div className="mb-5">
+        <div className="mb-5" id="sidesId">
             <h5 className="text-white mt-4">Sides</h5>
             <div className={classes.root} >
                 {

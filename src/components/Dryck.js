@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
 const Dryck = () => {
     const classes = useStyles();
     return (
-        <div className="mb-5">
+        <div className="mb-5" id="dryckId">
             <h5 className="text-white mt-4">Dryck</h5>
             <div className={classes.root} >
                 {

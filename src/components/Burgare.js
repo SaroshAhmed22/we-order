@@ -82,7 +82,7 @@ const burgarList = [
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '80%',
+        width: '100%',
     },
     heading: {
         fontSize: theme.typography.pxToRem(15),
@@ -92,10 +92,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const Burgare = () => {
+const Burgare = (props) => {
     const classes = useStyles();
     return (
-        <div className="mb-5">
+        <div className="mb-5" id="burgare">
             <h5 className="text-white mt-4">Burgare</h5>
             <div className={classes.root} >
                 {

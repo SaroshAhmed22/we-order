@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
 const Dipp = () => {
     const classes = useStyles();
     return (
-        <div className="mb-5">
+        <div className="mb-5" id="dippId">
             <h5 className="text-white mt-4">Dipp</h5>
             <div className={classes.root} >
                 {
