@@ -8,15 +8,15 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Icon } from '@material-ui/core';
 import { spacing } from '@material-ui/system';
 import { Button } from '@material-ui/core';
-import menyer1 from './img/menyer/menyer1.jpeg'
+import burgar1 from './img/burger/burgar1.jpeg'
 
 
-const menyerData = [
+const burgarData = [
     {
         id: 1,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 139,
     },
 
@@ -24,47 +24,47 @@ const menyerData = [
         id: 2,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: burgar1,
         itemPrice: 179,
     },
 ];
 
-const menyerList = [
+const burgarList = [
     { listItem: "valj Lask", listBtn: "Coca-Cola Zero", orderStatus: "Sold Out" },
     { listItem: "valj Lask", listBtn: "Not Selected", orderStatus: "Add to cart" },
     { listItem: "valj Lask", listBtn: "Not Selected", orderStatus: "Add to cart" },
@@ -92,14 +92,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const Menyer = () => {
+const Burgare = () => {
     const classes = useStyles();
     return (
         <div className="mb-5">
-            <h5 className="text-white mt-4">Menyer</h5>
+            <h5 className="text-white mt-4">Burgare</h5>
             <div className={classes.root} >
                 {
-                    menyerData.map((menyer) => {
+                    burgarData.map((menyer) => {
                         const { id, item, itemDesc, itemImg, itemPrice } = menyer
                         return (
                             <div>
@@ -120,7 +120,7 @@ const Menyer = () => {
                                                 <h6 className="text-white ">{itemPrice}<span>,-</span></h6>
                                             </div>
                                             <div className="float-right">
-                                                <img src={menyer1} alt="" width="200px" />
+                                                <img src={burgar1} alt="" width="200px" />
                                             </div>
                                         </div>
                                     </AccordionSummary>
@@ -141,7 +141,7 @@ const Menyer = () => {
                                             </div>
                                             <hr />
                                             {
-                                                menyerList.map((menyerList) => {
+                                                burgarList.map((menyerList) => {
                                                     const { listItem, listBtn, orderStatus
                                                     } = menyerList;
                                                     return (
@@ -174,11 +174,10 @@ const Menyer = () => {
                 }
             </div >
 
-
         </div>
 
 
     )
 }
 
-export default Menyer
+export default Burgare

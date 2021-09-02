@@ -1,6 +1,11 @@
 import React from 'react'
 import './Header.css'
 import Menyer from '../components/Menyer';
+import Burgare from '../components/Burgare';
+import Dryck from '../components/Dryck';
+import Sides from '../components/Sides';
+import Dipp from '../components/Dipp';
+import Deesert from '../components/Deesert';
 
 
 const Header = () => {
@@ -26,7 +31,7 @@ const Header = () => {
 
                     </div>
                     {/* ! Buttons start */}
-                    <div className="all-btns">
+                    <div className="" >
                         <div className="button-container">
                             <button type="button" class="btn btn-outline-dark our-buttons  btn-lg">Menyer</button>
                         </div>
@@ -39,15 +44,22 @@ const Header = () => {
                         <button type="button" class="btn btn-outline-dark our-buttons ">Dessert</button>
                         <button type="button" class="btn btn-outline-dark our-buttons ">Hemmakit</button>
                     </div>
-                    {/* ! Buttons start */}
+                    {/* ! Buttons end */}
                 </div>
 
             </div>
+
+
 
             <div className="container-fluid">
                 <div className="container">
                     <div className="col-md-9  col-12 ">
                         <Menyer />
+                        <Burgare />
+                        <Dryck />
+                        <Sides />
+                        <Dipp />
+                        <Deesert />
 
                     </div>
                 </div>

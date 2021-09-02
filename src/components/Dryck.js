@@ -8,15 +8,15 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Icon } from '@material-ui/core';
 import { spacing } from '@material-ui/system';
 import { Button } from '@material-ui/core';
-import menyer1 from './img/menyer/menyer1.jpeg'
+import dryck1 from './img/dryck/dryck1.jpeg'
 
 
-const menyerData = [
+const dryckData = [
     {
         id: 1,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 139,
     },
 
@@ -24,47 +24,47 @@ const menyerData = [
         id: 2,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
     {
         id: 3,
         item: "Limited Summer BBQ Menu",
         itemDesc: "Svenskt nötkött, cheddarost, romansallad, Phil's dressing, lök.",
-        itemImg: menyer1,
+        itemImg: dryck1,
         itemPrice: 179,
     },
 ];
 
-const menyerList = [
+const dryckList = [
     { listItem: "valj Lask", listBtn: "Coca-Cola Zero", orderStatus: "Sold Out" },
     { listItem: "valj Lask", listBtn: "Not Selected", orderStatus: "Add to cart" },
     { listItem: "valj Lask", listBtn: "Not Selected", orderStatus: "Add to cart" },
@@ -92,15 +92,15 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const Menyer = () => {
+const Dryck = () => {
     const classes = useStyles();
     return (
         <div className="mb-5">
-            <h5 className="text-white mt-4">Menyer</h5>
+            <h5 className="text-white mt-4">Dryck</h5>
             <div className={classes.root} >
                 {
-                    menyerData.map((menyer) => {
-                        const { id, item, itemDesc, itemImg, itemPrice } = menyer
+                    dryckData.map((dryck) => {
+                        const { id, item, itemDesc, itemImg, itemPrice } = dryck
                         return (
                             <div>
                                 <Accordion className="our-acds  mt-5">
@@ -108,19 +108,22 @@ const Menyer = () => {
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header" >
-                                        <div className="d-flex w-100 acd-head "  >
-                                            <div className="d-flex flex-column">
-                                                <div className="d-flex">
-                                                    <h5 className="ml-3 text-white">{item}</h5>
-                                                    <button class="sold" >Sold out</button>
+                                        <div className=" w-100">
+                                            <div className="dryck-main  " >
+                                                <div style={{ float: "left" }}>
+                                                    <div class="d-flex flex-column">
+                                                        <h5 className="text-white">
+                                                            Coca-Cola Zero
+                                                        </h5>
+
+                                                        <h6 className="mt-5 text-white" >100 <span>,-</span></h6>
+                                                    </div>
                                                 </div>
-                                                <p>
-                                                    {itemDesc}
-                                                </p>
-                                                <h6 className="text-white ">{itemPrice}<span>,-</span></h6>
-                                            </div>
-                                            <div className="float-right">
-                                                <img src={menyer1} alt="" width="200px" />
+                                                <div style={{ float: "right" }}>
+                                                    <img src={dryck1} width="200px" />
+                                                </div>
+
+
                                             </div>
                                         </div>
                                     </AccordionSummary>
@@ -140,30 +143,10 @@ const Menyer = () => {
                                                 </div>
                                             </div>
                                             <hr />
-                                            {
-                                                menyerList.map((menyerList) => {
-                                                    const { listItem, listBtn, orderStatus
-                                                    } = menyerList;
-                                                    return (
-                                                        <div>
-                                                            <div className="descriptions">
-                                                                <p className="di">{listItem}</p>
-                                                                <div className="di" style={{ float: 'right' }}>
-                                                                    <Button
-                                                                        class="my-list-btns "
-                                                                        size="small" variant="outlined" color="secondary">
-                                                                        {listBtn}
-                                                                    </Button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
+
                                             <div>
                                                 <button className="w-100 list-last-btn">Sold Out</button>
                                             </div>
-                                            <hr />
                                         </div>
                                     </AccordionDetails>
                                 </Accordion>
@@ -174,11 +157,10 @@ const Menyer = () => {
                 }
             </div >
 
-
         </div>
 
 
     )
 }
 
-export default Menyer
+export default Dryck

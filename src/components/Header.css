@@ -50,6 +50,13 @@ body{
     /* border: 10px solid; */
     justify-content: space-evenly;
 }
+.acd-head p{
+    color: #737373;
+}
+
+.descriptions{
+    color: #737373;
+}
 .our-acds{
     /* background-color: #2a2427 !important; */
     background-color:rgb(36, 36, 36) !important;
@@ -84,7 +91,19 @@ body{
     display: inline-block;
 }
 
-
-
-
+.list-last-btn{
+    background-color: rgba(248, 199, 109,0.9);
+    border-radius: 5px;
+    font-weight: 500;
+}
 /* ! Meynmer end */
+
+/* !Dryck start */
+.dryck-main{
+   
+}
+.dryck-c1{
+  
+}
+
+/* !Dryck end */
