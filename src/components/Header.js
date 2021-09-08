@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import './Header.css'
@@ -8,6 +8,7 @@ import Dryck from '../components/Dryck';
 import Sides from '../components/Sides';
 import Dipp from '../components/Dipp';
 import Deesert from '../components/Deesert';
+import logo from '../components/img/header/logo.png'
 
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -19,15 +20,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
+
+
+
 const Header = () => {
 
+    useEffect(() => {
+
+
+    });
 
 
 
 
 
+    const classes = useStyles();
 
-    const classes = useStyles()
     return (
         < >
             <div className="header-main">
@@ -36,52 +45,16 @@ const Header = () => {
                 <div className="header-content ">
                     <div className="d-flex ">
                         <div>
-                            <img src="
-                            https://snappo-prod.s3.amazonaws.com/uploads/app_icons/philsburger.png" alt="" className="header-img2" />
+                            <img src={logo} alt="" className="header-img2" />
                         </div>
-                        <div className="d-flex flex-column drott">
+                        {/* <div className=" d-flex flex-column drott">
                             <h3 className="text-white">
                                 Drottninggatan
                             </h3>
                             <button className="btn btn-dark"> Drottninggatan 79</button>
-                        </div>
+                        </div> */}
                     </div>
-                    {/* ! Buttons start */}
-                    <div className="our-all-btns ">
-                        <Button variant="contained" size="small" color="" className={classes.margin}  >
-                            Menyer
-                        </Button>
-                        <a href="#burgare" >
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Burgare och Sallad
-                            </Button>
-                        </a>
-                        <a href="#dryckId">
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Dryck
-                            </Button>
-                        </a>
-                        <a href="#sidesId">
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Sides
-                            </Button>
-                        </a>
-                        <a href="#dippId">
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Dipp
-                            </Button>
-                        </a>
-                        <a href="#deesertId">
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Deesert
-                            </Button>
-                        </a>
-                        <a href="#hemmakitId">
-                            <Button variant="contained" size="small" color="" className={classes.margin}  >
-                                Hemmakit
-                            </Button>
-                        </a>
-                    </div>
+
 
 
                     {/* <div className="" >
@@ -99,6 +72,47 @@ const Header = () => {
                     </div> */}
                     {/* ! Buttons end */}
                 </div>
+                {/* ! Buttons start */}
+                <div className="our-all-btns mt-5 container" id="sticky">
+                    <a href="">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Menyers
+                        </Button>
+                    </a>
+                    <a href="#burgare" >
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Burgare
+                        </Button>
+                    </a>
+
+                    <a href="#dryckId">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Menyers
+                        </Button>
+                    </a>
+                    <a href="#sidesId">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Sides
+                        </Button>
+                    </a>
+                    <a href="#dippId">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Dipp
+                        </Button>
+                    </a>
+
+                    <a href="#deesertId">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Deesert
+                        </Button>
+                    </a>
+                    <a href="#hemmakitId">
+                        <Button variant="contained" size="small" color="" className={classes.margin}  >
+                            Hemmakit
+                        </Button>
+                    </a>
+
+                </div>
 
             </div>
 
@@ -106,7 +120,7 @@ const Header = () => {
 
 
 
-            <div className="container-fluid" style={{ position: "absolute" }}>
+            <div className="container-fluid mt-5" style={{ position: "absolute" }}>
                 <div className="container">
                     <div className="row ">
                         <div className="col-lg-9  col-12 col-md-12 b1">
